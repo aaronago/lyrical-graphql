@@ -8,7 +8,9 @@ const schema = require('./schema/schema');
 const app = express();
 
 // Replace with your mongoLab URI
-const MONGO_URI = '';
+const mongouri = require('./secret')
+
+const MONGO_URI = mongouri;
 if (!MONGO_URI) {
   throw new Error('You must provide a MongoLab URI');
 }
